@@ -1,13 +1,50 @@
 *{
+    /*Margen de 0 para todos los elementos, hace que se pegue al maximo al navegador*/
     margin: 0;
+    /* Para que el width y el height de TODOS los elementos se reparta entre su padding,
+    margen y contenido*/
     box-sizing: border-box;
 }
 
+/*Tipos de elementos en CSS
+    (Viene por defecto)
+    -BLOCK --> Son las que tienen por defecto un display:Block
+    -INLINE --> Son las que tienen por defecto un display:Inline
+
+    Block: Abarca toda la pagina y no solo su contenido.
+    Inline: Abarca su contenido, y no toda la pagina.
+
+    Block: Es bloque cuando tiene:
+        Genera un salto de linea, por que ocupa el 100% del contenedor
+        Pueden usar todas las propiedades del box Model, Margen, Padding, width
+            y el height
+
+    Inline: Es inline cuando:
+        NO Genera un salto de linea, pero se crea un espacio entre dos
+        Solo ocupa el espacio de su contenido
+        No aplica los margenes, bordes y paddind de manera VERTICAL 
+        No aplica width, height
+
+    Si se quiere que el elemento ocupe solo su contenido y tenga todas las propiedades
+        para configurar, se debe utilizar display: inline-block
+*/
+
 body{
+    /*Todos los elementos dentro del body tiene fuente ARIAL*/
     font-family: Arial;
 }
 
 .card{
+    /*Todos los elementos dentro de la etiqueta card tienen:
+        color fondo
+        color texto
+        ancho
+        alto
+        margen: 0 para verticales, automatico para horizontales
+        margen de alto: 50px
+        texto alineado: centro
+        relleno o padding: 20px para verticales, 25 para horizontalesç
+        redondedo de esquinas: 10px */
     background-color: #15273f;
     color:white;
     width: 300px;
@@ -20,6 +57,12 @@ body{
 }
 
 .card__img{
+    /*Todos los elementos con clase card__img tienen:
+        ancho del 100% para que ocupe todo su contenido
+        display block, para que ocupen el ancho del navegador
+        alto
+        arreglo de imagen cover
+        y un radio heredado*/
     width:100%;
     display: block;
     height: 320px;
@@ -50,7 +93,6 @@ body{
     font-weight: bold;
     border-radius: 5px;
 }
-
 
 .card__cta:hover{
     transform: scale(1.035);
